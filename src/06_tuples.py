@@ -19,8 +19,11 @@ import math
 
 def dist(a, b):
     """Compute the distance between two x,y points."""
-    x0, y0 = a  # Destructuring assignment
-    x1, y1 = b
+    x0, y0 = a  # Destructuring assignment  x0 = 2, y0 = 7
+    x1, y1 = b  #                           x1 = -14, y1 = 72
+
+    # -16 * -16 + 65 * 65
+    # 
     
     return math.sqrt((x1 - x0)**2 + (y1 - y0)**2)
 
@@ -28,17 +31,19 @@ a = (2, 7)   # <-- x,y coordinates stored in tuples
 b = (-14, 72)
 
 # Prints "Distance is 66.94"
-print("Distance is: {:.2f}".format(dist(a, b)))
+print("Distance is: {:.2f}".format(dist(a, b))) # to 2 decimal places
 
 
 
 # Write a function `print_tuple` that prints all the values in a tuple
 
-# YOUR CODE HERE
+def print_tuple(tups):
+  for x in tups:
+    print(x)
 
 t = (1, 2, 5, 7, 99)
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
 
 # Declare a tuple of 1 element then print it
-u = (1)  # What needs to be added to make this work?
+u = (1,)  # What needs to be added to make this work? Add a comma
 print_tuple(u)

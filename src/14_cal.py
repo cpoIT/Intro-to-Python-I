@@ -22,3 +22,18 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+def myCalendar():
+  y = input("Input the year : ")
+  if y:
+    y = int(y)
+    m = int(input("Input the month (using a number): "))
+  else:
+    print("\nCurrent calendar:")
+    now = datetime.now()
+    y = now.year
+    m = now.month
+  print("\n")
+  print(calendar.month(y, m))
+  # print(datetime.now()) # 2019-10-11 15:52:45.302164
+myCalendar()
